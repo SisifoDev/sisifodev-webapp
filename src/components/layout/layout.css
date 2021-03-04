@@ -109,17 +109,6 @@ section {
   display: block;
 }
 
-html {
-  --primary: #3913b8;
-  --primary-dark: #8352fd;
-  --secondary: #2fb5fc;
-  --secondary-dark: #00cffd;
-  --backgroud: #f2f6ff;
-  --background-dark: #1a2151;
-  --background-secondary: #e3e8ff;
-  --background-secondary-dark: #1a2151;
-}
-
 body {
   line-height: 1;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
