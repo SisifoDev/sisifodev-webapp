@@ -1,33 +1,20 @@
 module.exports = {
   siteMetadata: {
-    title: "sisifodev",
+    title: `SisifoDev WebApp`,
+    description: `Don’t skip design. Learn design and code, by building real apps with React and Swift. Complete courses about the best tools.`,
+    author: `@manuelperd1710`,
   },
   plugins: [
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
+    `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        trackingId: "",
+        name: `images`,
+        path: `${__dirname}/static/images`,
       },
     },
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
-      },
-    },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
-    },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 };
