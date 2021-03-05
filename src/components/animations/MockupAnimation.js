@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
-const MockupAnimation = () => {
+export default function MockupAnimation() {
   return (
     <Wrapper>
       <div className="mockup1" />
@@ -10,14 +10,20 @@ const MockupAnimation = () => {
       <div className="mockup4" />
       <div className="mockup5" />
     </Wrapper>
-  );
-};
-
-export default MockupAnimation;
+  )
+}
 
 const Wrapper = styled.div`
   position: relative;
-  perspective: 500;
+  perspective: 5000;
+
+  @media (max-width: 768px) {
+    transform: scale(0.6);
+    transform-origin: top left;
+  }
+  @media (max-width: 450px) {
+    transform: scale(0.4);
+  }
 
   div {
     transform: rotateY(-20deg) rotateX(20deg);
@@ -30,14 +36,13 @@ const Wrapper = styled.div`
 
   :hover div {
     transform: rotateY(0deg) rotateX(0deg);
-
     &.mockup1 {
       transition-delay: 0.1s;
       transform: translate(-30px, -30px);
     }
     &.mockup2 {
       transition-delay: 0.2s;
-      transform: translate(0px, -30px);
+      transform: translate(0, -30px);
     }
     &.mockup3 {
       transition-delay: 0s;
@@ -48,9 +53,8 @@ const Wrapper = styled.div`
     }
     &.mockup5 {
       transition-delay: 0.2s;
-      transform: translate(90px, 30px);
+      transform: translate(-90px, 30px);
     }
-
     :hover {
       filter: brightness(150%) saturate(120%);
     }
@@ -77,7 +81,6 @@ const Wrapper = styled.div`
 
     border-radius: 16px;
   }
-
   .mockup2 {
     position: absolute;
     width: 183px;
@@ -100,7 +103,6 @@ const Wrapper = styled.div`
 
     border-radius: 16px;
   }
-
   .mockup3 {
     position: absolute;
     width: 701px;
@@ -115,7 +117,6 @@ const Wrapper = styled.div`
 
     border-radius: 8px;
   }
-
   .mockup4 {
     position: absolute;
     width: 399px;
@@ -144,4 +145,4 @@ const Wrapper = styled.div`
 
     border-radius: 8px;
   }
-`;
+`

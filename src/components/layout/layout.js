@@ -1,7 +1,7 @@
-import React from "react";
-import { GlobalStyle } from "../styles/GlobalStyle";
-import Header from "./Header";
-import "./layout.css";
+import React from "react"
+import { GlobalStyle } from "../styles/GlobalStyle"
+import Header from "./Header"
+import "./layout.css"
 
 function Layout({ children }) {
   return (
@@ -10,7 +10,7 @@ function Layout({ children }) {
       <Header />
       <main>{children}</main>
     </>
-  );
+  )
 }
 
-export default Layout;
+export default Layout
