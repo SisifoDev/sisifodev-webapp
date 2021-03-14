@@ -6,7 +6,7 @@ import styled from "styled-components";
 function NotFoundPage() {
   return (
     <Layout>
-      <SEO title="404: Not found" />
+      <SEO title="404: Page Not found" />
       <ImgContainer>
         <ImgBackground
           src="/images/404/404.svg"
